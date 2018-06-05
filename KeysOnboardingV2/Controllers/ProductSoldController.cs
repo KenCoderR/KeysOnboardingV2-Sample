@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using KeysOnboardingV2.Models;
 using System.Data.Entity.Infrastructure;
+using System.ComponentModel.DataAnnotations;
 
 namespace KeysOnboardingV2.Controllers
 {
@@ -16,9 +17,13 @@ namespace KeysOnboardingV2.Controllers
     {
 
         public int Id { get; set; }
+        [Display(Name="Product")]
         public long ProductId { get; set; }
+        [Display(Name = "Customer")]
         public long CustomerId { get; set; }
+        [Display(Name = "Store")]
         public int StoreId { get; set; }
+        [Display(Name = "Date of Purchase")]
         public string DateSold { get; set; }
     }
 
